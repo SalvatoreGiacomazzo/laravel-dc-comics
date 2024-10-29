@@ -11,7 +11,7 @@ class ElementController extends Controller
     public function index()
     {
         $elements = Element::all();
-        return view('pages.elements');
+        return view('pages.elements', compact('elements'));
     }
 
 
