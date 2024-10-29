@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ElementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages.page');
+    return view('pages.index');
 });
+
+
+Route::get('/elements', [ElementController::class, 'index'])->name('pages.elements');
+Route::get('/show', [ElementController::class, 'show'])->name('pages.show');
