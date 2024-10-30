@@ -16,7 +16,7 @@
         @yield("main-content")
 
 
-    @include("partials.footer")
+
     @vite("resources/js/app.js")
     @yield("additional-scripts")
 </body>
