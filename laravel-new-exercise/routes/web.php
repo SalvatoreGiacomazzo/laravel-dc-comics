@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ElementController;
+use App\Http\Controllers\AlbumController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,5 +19,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/elements', [ElementController::class, 'index'])->name('pages.index');
-Route::get('/elements/{id}', [ElementController::class, 'show'])->name('pages.show');
+Route::get('/elements', [AlbumController::class, 'index'])->name('pages.albums');
+Route::get('/elements/{id}', [AlbumController::class, 'show'])->name('pages.show');
