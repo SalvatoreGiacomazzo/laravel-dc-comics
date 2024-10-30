@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('album_name');
             $table->string('band_name');
             $table->year('drop_year');
-            $table->string('genres');
+            $table->string('genre');
             $table->string('img_Url');
             $table->timestamps();
         });

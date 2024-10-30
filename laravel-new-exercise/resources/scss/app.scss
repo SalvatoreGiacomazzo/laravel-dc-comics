@@ -1,1 +1,7 @@
 @use "bootstrap/scss/bootstrap" as *;
+
+header,
+footer {
+    background-color: black;
+    height: 100px;
+}
