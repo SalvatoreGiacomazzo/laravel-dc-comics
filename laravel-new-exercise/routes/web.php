@@ -20,4 +20,4 @@ Route::get('/', function () {
 
 
 Route::get('/elements', [ElementController::class, 'index'])->name('pages.index');
-Route::get('/elements/{element}', [ElementController::class, 'show'])->name('pages.show');
+Route::get('/elements/{id}', [ElementController::class, 'show'])->name('pages.show');
