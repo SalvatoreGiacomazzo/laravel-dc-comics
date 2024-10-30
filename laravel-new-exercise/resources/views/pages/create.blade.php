@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
         <div class="col-12">
             <form class="row gy-2 gx-3 align-items-center w-75" method="POST" action="{{route("album.store")}}" >
-       @csrf
+          @csrf
                   <label for="album_name" class="form-label">Album Name</label>
                   <input type="text" class="form-control" id="album_name" name="album_name" required>
 
