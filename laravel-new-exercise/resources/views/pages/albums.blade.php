@@ -4,7 +4,7 @@
 @section("page-title", "Albums October 2024")
 
 @section("main-content")
-
+<main>
 <div class="container">
     <div class="row g-2">
         @foreach ($albums as $album)
@@ -15,13 +15,13 @@
   <h4 class="card-title text-light">{{$album->album_name}}</h5>
   <h5 class="card-title text-light">{{$album->band_name}}</h5>
   <p class="card-text">{{$album->genre}}, {{$album->drop_year}}</p>
-  <a href="{{ route('pages.show', $album->id) }}" class="btn">Show</a>
+  <a href="{{ route('pages.show', $album['id']) }}" class="btn">Show</a>
 </div>
 </div>
 </div>
 @endforeach
     </div>
 </div>
-
+</main>
 
 @endsection

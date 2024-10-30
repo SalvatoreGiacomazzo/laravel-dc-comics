@@ -20,4 +20,4 @@ Route::get('/homepage', function () {
 
 
 Route::get('/albums', [AlbumController::class, 'index'])->name('pages.albums');
-Route::get('/albums/{id}', [AlbumController::class, 'show'])->name('pages.show');
+Route::get('/show/{id}', [AlbumController::class, 'show'])->name('pages.show');

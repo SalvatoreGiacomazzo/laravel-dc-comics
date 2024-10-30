@@ -3,13 +3,19 @@
 header,
 footer {
     background-color: black;
-    height: 100px;
+    height: 70px;
 }
 
 .card-text {
     color: blueviolet;
 }
 
-.btn {
+.btn,
+main {
     background-color: blueviolet;
+}
+
+.another-color {
+    background-color: hotpink;
+    color: black;
 }

@@ -97,7 +97,7 @@ class AlbumSeeder extends Seeder
             ],
         ];
         foreach ($albums as $album) {
-            Album::create($album);
+            $newAlbum = Album::create($album);
         }
     }
 }
