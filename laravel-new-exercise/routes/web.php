@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/homepage', function () {
     return view('pages.homepage');
 });
 
 
-Route::get('/elements', [AlbumController::class, 'index'])->name('pages.albums');
-Route::get('/elements/{id}', [AlbumController::class, 'show'])->name('pages.show');
+Route::get('/albums', [AlbumController::class, 'index'])->name('pages.albums');
+Route::get('/albums/{id}', [AlbumController::class, 'show'])->name('pages.show');
