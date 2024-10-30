@@ -95,6 +95,22 @@ class AlbumSeeder extends Seeder
                 'img_Url' => 'https://t2.genius.com/unsafe/600x600/https://images.genius.com/e884aff33d64038b6144f6072d004473.1000x1000x1.jpg',
 
             ],
+            [
+                'album_name' => 'Spring Break No Parents',
+                'band_name' => 'Leer',
+                'drop_year' => '2013',
+                'genre' => 'Screamo',
+                'img_Url' => 'https://m.media-amazon.com/images/I/61bnF3XQNYL.jpg',
+
+            ],
+            [
+                'album_name' => 'Sing Me a Lullaby, My Sweet Temptation',
+                'band_name' => '$uicideboy$',
+                'drop_year' => '2022',
+                'genre' => 'Cloud Rap',
+                'img_Url' => 'https://tse3.mm.bing.net/th?id=OIP.t0jcN89O5rQZ0bRohGFFbgHaHa&pid=Api&P=0&h=180',
+
+            ],
         ];
         foreach ($albums as $album) {
             $newAlbum = Album::create($album);

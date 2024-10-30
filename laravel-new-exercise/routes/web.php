@@ -21,3 +21,7 @@ Route::get('/homepage', function () {
 
 Route::get('/albums', [AlbumController::class, 'index'])->name('pages.albums');
 Route::get('/show/{id}', [AlbumController::class, 'show'])->name('pages.show');
+
+Route::get('/create', function () {
+    return view('pages.create');
+});

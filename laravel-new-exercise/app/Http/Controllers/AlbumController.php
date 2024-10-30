@@ -20,4 +20,8 @@ class AlbumController extends Controller
         $album = Album::findOrFail($id);
         return view('pages.show', compact('album'));
     }
+
+    public function create() {}
+
+    public function store(Request $request) {}
 }
