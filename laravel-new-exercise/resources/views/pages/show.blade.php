@@ -15,7 +15,8 @@
                         <h6 class="card-subtitle mb-2 text-muted">{{ $album->band_name }}</h6>
 
                         <p class="card-text">{{ $album->genre }}, {{ $album->drop_year }}</p>
-                        <a href="{{ route('pages.albums') }}" class="btn">Back to the Albums</a>
+                        <a href="{{ route("pages.albums") }}" class="btn">Back to the Albums</a>
+                        <a href="{{ route('edit', $album->id) }}" class="btn btn-sm">Edit</a>
                     </div>
                 </div>
             </div>

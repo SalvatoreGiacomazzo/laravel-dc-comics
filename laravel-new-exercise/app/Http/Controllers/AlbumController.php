@@ -41,6 +41,14 @@ class AlbumController extends Controller
         $newAlbum->save();
 
 
-        return redirect()->route("pages.show", ["id" => $newAlbum->id]);
+        return redirect()->route("pages.albums");
+    }
+
+
+    public function edit(string $id)
+    {
+        $album = Album::findOrFail($id);
+
+        return view("pages.edit", compact("album"));
     }
 }

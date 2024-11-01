@@ -23,3 +23,6 @@ Route::get('/albums', [AlbumController::class, "index"])->name('pages.albums');
 Route::get('/albums/create', [AlbumController::class, "create"])->name('pages.create');
 Route::get('/show/{id}', [AlbumController::class, "show"])->name('pages.show');
 Route::post('/albums', [AlbumController::class, "store"])->name('album.store');
+
+
+Route::get('/albums/{id}/edit', [AlbumController::class, 'edit'])->name('edit');
