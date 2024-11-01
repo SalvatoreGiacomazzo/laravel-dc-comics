@@ -17,6 +17,12 @@
                         <p class="card-text">{{ $album->genre }}, {{ $album->drop_year }}</p>
                         <a href="{{ route("pages.albums") }}" class="btn">Back to the Albums</a>
                         <a href="{{ route('edit', $album->id) }}" class="btn btn-sm">Edit</a>
+                        <form action="{{route('destroy', $album->id)}}" method="POST">
+                           @method('DELETE')
+                            @csrf
+                        <a href="#">  <button type="submit" class="btn btn-sm" id="delete" >Delete</button></a>
+
+                        </form>
                     </div>
                 </div>
             </div>

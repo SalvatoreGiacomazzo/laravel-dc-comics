@@ -66,4 +66,13 @@ class AlbumController extends Controller
         $album->save();
         return redirect()->route("pages.albums");
     }
+
+
+    public function destroy(string $id)
+    {
+
+        $album = Album::findOrFail($id);
+        $album->delete();
+        return redirect()->route("pages.albums");
+    }
 }
