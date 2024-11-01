@@ -6,6 +6,18 @@
         <h1 class="text-center">Edit Album Info</h1>
          <div class="row justify-content-center">
           <div class="col-12">
+            @if($errors->any())
+            <div class="text-center bg-danger">
+
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>
+                       {{ $error }}
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
                     </div>
                     <form class="row gy-2 gx-3 align-items-center w-75" method="POST" action="{{ route('update', $album->id) }}">
                         @csrf

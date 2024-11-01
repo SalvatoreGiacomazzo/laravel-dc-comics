@@ -36,8 +36,6 @@ class AlbumController extends Controller
             "genre" => "required|string|min:3|max:255",
             "img_Url" => "required|url"
 
-
-
         ]);
 
         $albumData = $request->all();
@@ -65,6 +63,17 @@ class AlbumController extends Controller
 
     public function update(Request $request, string $id)
     {
+        $request->validate([
+            "album_name" => "required|string|min:4|max:255",
+            "band_name" => "required|string|min:3|max:255",
+            "drop_year" => "required|numeric|min_digits:4|min:1900|max:2024",
+            "genre" => "required|string|min:3|max:255",
+            "img_Url" => "required|url"
+
+        ]);
+
+
+
         $data = $request->all();
 
         $album = Album::findOrFail($id);
