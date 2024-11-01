@@ -49,6 +49,21 @@ class AlbumController extends Controller
     {
         $album = Album::findOrFail($id);
 
-        return view("pages.edit", compact("album"));
+        return view('pages.edit', compact('album'));
+    }
+
+    public function update(Request $request, string $id)
+    {
+        $data = $request->all();
+
+        $album = Album::findOrFail($id);
+        $album->album_name = $data["album_name"];
+        $album->band_name = $data["band_name"];
+        $album->drop_year = $data["drop_year"];
+        $album->genre = $data["genre"];
+        $album->img_Url = $data["img_Url"];
+
+        $album->save();
+        return redirect()->route("pages.albums");
     }
 }

@@ -26,3 +26,4 @@ Route::post('/albums', [AlbumController::class, "store"])->name('album.store');
 
 
 Route::get('/albums/{id}/edit', [AlbumController::class, 'edit'])->name('edit');
+Route::put('/albums/{id}/', [AlbumController::class, 'update'])->name('update');

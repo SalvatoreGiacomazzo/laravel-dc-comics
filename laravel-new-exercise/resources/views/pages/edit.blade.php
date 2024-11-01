@@ -3,11 +3,20 @@
 @section('main-content')
 
     <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-12">
+        <h1 class="text-center">Edit Album Info</h1>
+         <div class="row justify-content-center">
+          <div class="col-12">
                     </div>
-            <form class="row gy-2 gx-3 align-items-center w-75" method="POST" action="{{ route('edit', $album->id) }}" >
-          @csrf
+                    <form class="row gy-2 gx-3 align-items-center w-75" method="POST" action="{{ route('update', $album->id) }}">
+                        @csrf
+                        @method('PUT')
+
+                                          <div class="col-auto">
+
+                                              <button type="submit" class="btn btn-dark">Submit</button>
+
+                                          <a href="{{ route('pages.albums') }}" class="btn">Back to the Albums</a>
+                                        </div>
                   <label for="album_name" class="form-label">Album Name</label>
                   <input type="text" class="form-control" id="album_name" value="{{$album->album_name}}" name="album_name" required>
 
@@ -18,23 +27,16 @@
                   <div class="col-auto">
                     <label for="drop_year" class="form-label">Year of Release</label>
                     <input type="number" min="1900" max="2024" class="form-control" id="drop_year" value="{{$album->drop_year}}" name="drop_year" required>
-
+                  </div>
                   <div class="col-auto">
                     <label for="genre" class="form-label">Genre</label>
                     <input type="text" class="form-control" id="genre" value="{{$album->genre}}" name="genre" required>
-
+                  </div>
                   <div class="col-auto">
                     <label for="img_Url" class="form-label">Link the Album Cover</label>
                     <input type="text" class="form-control" id="img_Url" value="{{$album->img_Url}}" name="img_Url" required>
+                  </div>
 
-
-
-
-                <div class="col-auto">
-                  <button type="submit" class="btn btn-dark">Submit</button>
-                  <button type="reset" class="btn btn-warnin">Reset Fields</button>
-                  <a href="{{ route('pages.albums') }}" class="btn">Back to the Albums</a>
-                </div>
               </form>
         </div>
     </div>
