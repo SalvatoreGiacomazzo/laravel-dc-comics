@@ -10,6 +10,13 @@ class AlbumController extends Controller
 {
     public function index()
     {
-        return Album::all();
+        $albums = Album::all();
+
+
+        return response()->json([
+
+            "success" => true,
+            "data" => $albums,
+        ]);
     }
 }
