@@ -28,3 +28,7 @@ Route::post('/albums', [AlbumController::class, "store"])->name('album.store');
 Route::get('/albums/{id}/edit', [AlbumController::class, 'edit'])->name('edit');
 Route::put('/albums/{id}/', [AlbumController::class, 'update'])->name('update');
 Route::delete('albums/{id}/', [AlbumController::class, 'destroy'])->name('destroy');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
