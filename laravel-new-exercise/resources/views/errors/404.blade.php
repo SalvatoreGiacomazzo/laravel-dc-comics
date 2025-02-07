@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app') <!-- Assicurati che questo sia il layout che include Bootstrap -->
+@section('content')
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,9 @@
     <title>Error 404</title>
 </head>
 <body>
-<h1 class="text-center">No album was found!</h1>
-<a href="{{ route("pages.albums") }}" class="btn">Back to the Albums</a>
+<div class="d-flex justify-content-center align-items-center">
+    <h1>No album was found!</h1>
+<a href="{{ route("pages.albums") }}" class="btn btn-primary">Back to the Albums</a>
+</div>
 </body>
-</html>
+@endsection
